@@ -7,9 +7,11 @@ import Navbar from "./components/Navbar";
 
 import "./styles.scss";
 
+import useSwitchButton from "./hooks/useSwitchButton"
+
 const App = () => {
   const [coinData, setCoinData] = useState([]);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useSwitchButton(false);
 
   useEffect(() => {
     axios
